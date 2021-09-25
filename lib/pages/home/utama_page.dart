@@ -21,7 +21,7 @@ class UtamaPage extends StatelessWidget {
                   height: 119,
                   margin: EdgeInsets.only(top: 282),
                   decoration: BoxDecoration(
-                    color: Colors.yellow,
+                    color: yellow,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Column(
@@ -59,7 +59,7 @@ class UtamaPage extends StatelessWidget {
                   height: 119,
                   margin: EdgeInsets.only(top: 282),
                   decoration: BoxDecoration(
-                    color: Colors.yellow,
+                    color: yellow,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Column(
@@ -101,7 +101,7 @@ class UtamaPage extends StatelessWidget {
                   width: 150,
                   height: 119,
                   decoration: BoxDecoration(
-                    color: Colors.yellow,
+                    color: yellow,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Column(
@@ -138,7 +138,7 @@ class UtamaPage extends StatelessWidget {
                   width: 150,
                   height: 119,
                   decoration: BoxDecoration(
-                    color: Colors.yellow,
+                    color: yellow,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Column(
@@ -183,6 +183,7 @@ class UtamaPage extends StatelessWidget {
               ),
             ),
             child: SafeArea(
+              bottom: false,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -239,7 +240,7 @@ class UtamaPage extends StatelessWidget {
     }
 
     return Scaffold(
-      backgroundColor: Colors.yellow.withOpacity(0.1),
+      backgroundColor: yellow.withOpacity(0.1),
       body: Column(
         children: [
           header(),

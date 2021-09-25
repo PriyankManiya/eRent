@@ -8,6 +8,8 @@ Color grey = Color(0xffB1B1D2);
 Color orange = Color(0xffF9AC19);
 Color blueGlow = Color(0xffEFEFFA);
 Color blue = Color(0xff2699FB);
+Color darkGrey = Color(0xff222222);
+Color black = Colors.black;
 
 TextStyle textYellow = GoogleFonts.ubuntu(
   color: yellow,

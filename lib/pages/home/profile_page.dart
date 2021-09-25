@@ -24,7 +24,7 @@ class ProfilePage extends StatelessWidget {
                 height: 107,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: Colors.black,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -32,7 +32,7 @@ class ProfilePage extends StatelessWidget {
                 child: Center(
                   child: Text(
                     'Profil',
-                    style: textBlack.copyWith(
+                    style: textYellow.copyWith(
                       fontSize: 26,
                       fontWeight: bold,
                     ),
@@ -49,7 +49,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: blueGlow,
+                      color: black,
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: Column(
@@ -62,10 +62,9 @@ class ProfilePage extends StatelessWidget {
                           width: 117,
                           height: 117,
                           decoration: BoxDecoration(
-                            color: white,
                             borderRadius: BorderRadius.circular(16),
                             image: DecorationImage(
-                              fit: BoxFit.fill,
+                              fit: BoxFit.contain,
                               image: AssetImage(
                                 'assets/image_logo.png',
                               ),
@@ -83,13 +82,13 @@ class ProfilePage extends StatelessWidget {
                                 width: 32,
                                 height: 32,
                                 decoration: BoxDecoration(
-                                  color: white,
+                                  color: yellow,
                                   borderRadius: BorderRadius.circular(100),
                                 ),
                                 child: Center(
                                   child: Icon(
                                     Icons.person,
-                                    color: blue,
+                                    color: black,
                                   ),
                                 ),
                               ),
@@ -101,18 +100,20 @@ class ProfilePage extends StatelessWidget {
                                 children: [
                                   Text(
                                     'Ali Abu',
-                                    style: textBlue.copyWith(
-                                      fontWeight: bold,
-                                    ),
+                                    style: textWhite.copyWith(
+                                        fontWeight: bold,
+                                        color: white,
+                                        fontSize: 16),
                                   ),
                                   SizedBox(
                                     height: 4,
                                   ),
                                   Text(
                                     'Petaling Jaya',
-                                    style: textBlue.copyWith(
-                                      fontSize: 10,
-                                    ),
+                                    style: textWhite.copyWith(
+                                        fontWeight: bold,
+                                        color: white,
+                                        fontSize: 12),
                                   ),
                                 ],
                               ),
@@ -120,16 +121,16 @@ class ProfilePage extends StatelessWidget {
                                 width: 125,
                               ),
                               Container(
-                                width: 96,
-                                height: 32,
-                                child: TextButton(
-                                  onPressed: () {},
-                                  style: TextButton.styleFrom(
-                                      backgroundColor: orange),
+                                decoration: BoxDecoration(
+                                    color: yellow,
+                                    borderRadius: BorderRadius.circular(50)),
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 8, vertical: 5),
                                   child: Text(
                                     'Status',
                                     style: textBlack.copyWith(
-                                      fontSize: 10,
+                                      fontSize: 14,
                                       fontWeight: bold,
                                     ),
                                   ),
@@ -146,8 +147,10 @@ class ProfilePage extends StatelessWidget {
                           ),
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: white,
-                          ),
+                              color: black,
+                              borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(25),
+                                  bottomRight: Radius.circular(25))),
                           child: Column(
                             children: [
                               Row(
@@ -156,13 +159,13 @@ class ProfilePage extends StatelessWidget {
                                     width: 32,
                                     height: 32,
                                     decoration: BoxDecoration(
-                                      color: white,
+                                      color: yellow,
                                       borderRadius: BorderRadius.circular(100),
                                     ),
                                     child: Center(
                                       child: Icon(
                                         Icons.phone,
-                                        color: blue,
+                                        color: black,
                                       ),
                                     ),
                                   ),
@@ -175,18 +178,20 @@ class ProfilePage extends StatelessWidget {
                                     children: [
                                       Text(
                                         '+123 456 789 234',
-                                        style: textBlue.copyWith(
-                                          fontWeight: bold,
-                                        ),
+                                        style: textWhite.copyWith(
+                                            fontWeight: bold,
+                                            color: white,
+                                            fontSize: 16),
                                       ),
                                       SizedBox(
                                         height: 4,
                                       ),
                                       Text(
                                         'No Telefon',
-                                        style: textBlue.copyWith(
-                                          fontSize: 10,
-                                        ),
+                                        style: textWhite.copyWith(
+                                            fontWeight: bold,
+                                            color: white,
+                                            fontSize: 12),
                                       ),
                                     ],
                                   ),
@@ -204,13 +209,13 @@ class ProfilePage extends StatelessWidget {
                                     width: 32,
                                     height: 32,
                                     decoration: BoxDecoration(
-                                      color: white,
+                                      color: yellow,
                                       borderRadius: BorderRadius.circular(100),
                                     ),
                                     child: Center(
                                       child: Icon(
                                         Icons.email,
-                                        color: blue,
+                                        color: black,
                                       ),
                                     ),
                                   ),
@@ -223,18 +228,20 @@ class ProfilePage extends StatelessWidget {
                                     children: [
                                       Text(
                                         'Ali@email.com',
-                                        style: textBlue.copyWith(
-                                          fontWeight: bold,
-                                        ),
+                                        style: textWhite.copyWith(
+                                            fontWeight: bold,
+                                            color: white,
+                                            fontSize: 16),
                                       ),
                                       SizedBox(
                                         height: 4,
                                       ),
                                       Text(
                                         'Emel',
-                                        style: textBlue.copyWith(
-                                          fontSize: 10,
-                                        ),
+                                        style: textWhite.copyWith(
+                                            fontWeight: bold,
+                                            color: white,
+                                            fontSize: 12),
                                       ),
                                     ],
                                   ),
@@ -252,13 +259,13 @@ class ProfilePage extends StatelessWidget {
                                     width: 32,
                                     height: 32,
                                     decoration: BoxDecoration(
-                                      color: white,
+                                      color: yellow,
                                       borderRadius: BorderRadius.circular(100),
                                     ),
                                     child: Center(
                                       child: Icon(
                                         Icons.security,
-                                        color: blue,
+                                        color: black,
                                       ),
                                     ),
                                   ),
@@ -271,18 +278,20 @@ class ProfilePage extends StatelessWidget {
                                     children: [
                                       Text(
                                         '+123 456 789 234',
-                                        style: textBlue.copyWith(
-                                          fontWeight: bold,
-                                        ),
+                                        style: textWhite.copyWith(
+                                            fontWeight: bold,
+                                            color: white,
+                                            fontSize: 16),
                                       ),
                                       SizedBox(
                                         height: 4,
                                       ),
                                       Text(
                                         'Akaun',
-                                        style: textBlue.copyWith(
-                                          fontSize: 10,
-                                        ),
+                                        style: textWhite.copyWith(
+                                            fontWeight: bold,
+                                            color: white,
+                                            fontSize: 12),
                                       ),
                                     ],
                                   ),
@@ -300,13 +309,13 @@ class ProfilePage extends StatelessWidget {
                                     width: 32,
                                     height: 32,
                                     decoration: BoxDecoration(
-                                      color: white,
+                                      color: yellow,
                                       borderRadius: BorderRadius.circular(100),
                                     ),
                                     child: Center(
                                       child: Icon(
                                         Icons.security,
-                                        color: blue,
+                                        color: black,
                                       ),
                                     ),
                                   ),
@@ -319,17 +328,20 @@ class ProfilePage extends StatelessWidget {
                                     children: [
                                       Text(
                                         'Tiada lesen',
-                                        style: textBlue.copyWith(
-                                          fontWeight: bold,
-                                        ),
+                                        style: textWhite.copyWith(
+                                            fontWeight: bold,
+                                            color: white,
+                                            fontSize: 16),
                                       ),
                                       SizedBox(
                                         height: 4,
                                       ),
                                       Text(
                                         'Akaun',
-                                        style: textBlue.copyWith(
-                                          fontSize: 10,
+                                        style: textWhite.copyWith(
+                                            fontWeight: bold,
+                                      color: white,
+                                      fontSize: 12
                                         ),
                                       ),
                                     ],
@@ -339,28 +351,51 @@ class ProfilePage extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              Container(
-                                margin: EdgeInsets.only(top: 10),
-                                width: 162,
-                                height: 60,
-                                decoration: BoxDecoration(
-                                  color: orange,
-                                  borderRadius: BorderRadius.circular(6),
-                                ),
-                                child: TextButton(
+                              SizedBox(
+                                height: 25,
+                              ),
+                              RaisedButton(
+                                  color: yellow,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: new BorderRadius.circular(5),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 5, vertical: 11),
+                                    child: Text(
+                                      "Tukar Pemilik",
+                                      style: textBlack.copyWith(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                  ),
                                   onPressed: () {
                                     Navigator.pushNamed(
                                         context, '/tukar-pemilik');
-                                  },
-                                  child: Text(
-                                    'Tukar Pemilik',
-                                    style: textBlack.copyWith(
-                                      fontSize: 20,
-                                      fontWeight: bold,
-                                    ),
-                                  ),
-                                ),
-                              ),
+                                  })
+                              // Container(
+                              //   margin: EdgeInsets.only(top: 10),
+                              //   width: 162,
+                              //   height: 60,
+                              //   decoration: BoxDecoration(
+                              //     color: yellow,
+                              //     borderRadius: BorderRadius.circular(6),
+                              //   ),
+                              //   child: TextButton(
+                              //     onPressed: () {
+                              //       Navigator.pushNamed(
+                              //           context, '/tukar-pemilik');
+                              //     },
+                              //     child: Text(
+                              //       'Tukar Pemilik',
+                              //       style: textBlack.copyWith(
+                              //         fontSize: 20,
+                              //         fontWeight: bold,
+                              //       ),
+                              //     ),
+                              //   ),
+                              // ),
                             ],
                           ),
                         ),
@@ -376,6 +411,7 @@ class ProfilePage extends StatelessWidget {
     }
 
     return Scaffold(
+      backgroundColor: yellow.withOpacity(0.1),
       body: Column(
         children: [
           header(),

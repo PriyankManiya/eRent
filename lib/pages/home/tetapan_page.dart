@@ -32,7 +32,7 @@ class _TetapanPageState extends State<TetapanPage> {
                 height: 107,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: black,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -40,7 +40,7 @@ class _TetapanPageState extends State<TetapanPage> {
                 child: Center(
                   child: Text(
                     'Tetapan',
-                    style: textBlack.copyWith(
+                    style: textYellow.copyWith(
                       fontSize: 26,
                       fontWeight: bold,
                     ),
@@ -61,7 +61,7 @@ class _TetapanPageState extends State<TetapanPage> {
                 height: 450,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: blueGlow,
+                  color: black,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -73,51 +73,29 @@ class _TetapanPageState extends State<TetapanPage> {
                       ),
                       height: 56,
                       decoration: BoxDecoration(
-                        color: Color(0xff354958),
-                      ),
+                          color: yellow,
+                          borderRadius: BorderRadius.circular(15)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             'Notifikasi',
-                            style: textWhite.copyWith(
-                              fontWeight: bold,
+                            style: textBlack.copyWith(
+                                fontWeight: bold, fontSize: 16),
+                          ),
+                          Transform.scale(
+                            scale: 0.8,
+                            child: CupertinoSwitch(
+                              value: isNotified,
+                              onChanged: (value) {
+                                setState(() {
+                                  isNotified = value;
+                                });
+                              },
+                              trackColor: Colors.grey[600],
+                              activeColor: Colors.black,
                             ),
-                          ),
-                           Transform.scale(
-                        scale: 0.8,
-                          child:CupertinoSwitch(
-                            value: isNotified,
-                            onChanged: (value) {
-                              setState(() {
-                                isNotified = value;
-                              });
-                            },
-                            trackColor: Color(0xffBCE0FD),
-                            activeColor: Colors.green,
-                          ),
                           )
-                          // Container(
-                          //   width: 40,
-                          //   height: 24,
-                          //   decoration: BoxDecoration(
-                          //     color: Color(0xffBCE0FD),
-                          //     borderRadius: BorderRadius.circular(20),
-                          //     border: Border.all(color: white),
-                          //   ),
-                          //   child: Container(
-                          //     margin: EdgeInsets.only(
-                          //       right: 16,
-                          //     ),
-                          //     width: 10,
-                          //     height: 24,
-                          //     decoration: BoxDecoration(
-                          //       color: purple,
-                          //       borderRadius: BorderRadius.circular(100),
-                          //       border: Border.all(color: white),
-                          //     ),
-                          //   ),
-                          // ),
                         ],
                       ),
                     ),
@@ -128,51 +106,29 @@ class _TetapanPageState extends State<TetapanPage> {
                       ),
                       height: 56,
                       decoration: BoxDecoration(
-                        color: Color(0xff354958),
-                      ),
+                          color: yellow,
+                          borderRadius: BorderRadius.circular(15)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             'Bahasa',
-                            style: textWhite.copyWith(
-                              fontWeight: bold,
-                            ),
+                            style: textBlack.copyWith(
+                                fontWeight: bold, fontSize: 16),
                           ),
                           Transform.scale(
-                        scale: 0.8,
-                          child:CupertinoSwitch(
-                            value: isBahasa,
-                            onChanged: (value) {
-                              setState(() {
-                                isBahasa = value;
-                              });
-                            },
-                            trackColor: Color(0xffBCE0FD),
-                            activeColor: Colors.green,
-                          ),
+                            scale: 0.8,
+                            child: CupertinoSwitch(
+                              value: isBahasa,
+                              onChanged: (value) {
+                                setState(() {
+                                  isBahasa = value;
+                                });
+                              },
+                              trackColor: Colors.grey[600],
+                              activeColor: Colors.black,
+                            ),
                           )
-                          // Container(
-                          //   width: 40,
-                          //   height: 24,
-                          //   decoration: BoxDecoration(
-                          //     color: Color(0xffBCE0FD),
-                          //     borderRadius: BorderRadius.circular(20),
-                          //     border: Border.all(color: white),
-                          //   ),
-                          //   child: Container(
-                          //     margin: EdgeInsets.only(
-                          //       right: 16,
-                          //     ),
-                          //     width: 10,
-                          //     height: 24,
-                          //     decoration: BoxDecoration(
-                          //       color: purple,
-                          //       borderRadius: BorderRadius.circular(100),
-                          //       border: Border.all(color: white),
-                          //     ),
-                          //   ),
-                          // ),
                         ],
                       ),
                     ),
@@ -181,34 +137,31 @@ class _TetapanPageState extends State<TetapanPage> {
                     ),
                     Text(
                       'Version 1.0',
-                      style: textBlack.copyWith(
-                        fontSize: 10,
+                      style: textWhite.copyWith(
+                        fontSize: 13,
                         fontWeight: bold,
                       ),
                     ),
                     SizedBox(
                       height: 17,
                     ),
-                    Container(
-                      width: 162,
-                      height: 60,
-                      child: TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: orange,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6),
+                    RaisedButton(
+                        color: yellow,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(5),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 5, vertical: 11),
+                          child: Text(
+                            "Log Keluar",
+                            style: textBlack.copyWith(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                        onPressed: () {},
-                        child: Text(
-                          'Log Keluar',
-                          style: textBlack.copyWith(
-                            fontSize: 20,
-                            fontWeight: bold,
-                          ),
-                        ),
-                      ),
-                    ),
+                        onPressed: () {})
                   ],
                 ),
               ),
@@ -219,6 +172,7 @@ class _TetapanPageState extends State<TetapanPage> {
     }
 
     return Scaffold(
+      backgroundColor: yellow.withOpacity(0.1),
       body: Column(
         children: [
           header(),

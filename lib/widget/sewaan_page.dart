@@ -32,7 +32,7 @@ class _SewaanPageState extends State<SewaanPage> {
                 height: 200,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: black,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -52,14 +52,15 @@ class _SewaanPageState extends State<SewaanPage> {
                           },
                           child: Icon(
                             Icons.arrow_back_ios_new_sharp,
+                            color: white,
                           ),
                         ),
                         SizedBox(
                           width: 20,
                         ),
                         Text(
-                          'Pembayaran Sewaan ?',
-                          style: textBlack.copyWith(
+                          'Pembayaran Sewaan',
+                          style: textWhite.copyWith(
                             fontSize: 26,
                             fontWeight: bold,
                           ),
@@ -103,7 +104,7 @@ class _SewaanPageState extends State<SewaanPage> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              backgroundColor: orange,
+                              backgroundColor: yellow,
                             ),
                             onPressed: () {
                               Navigator.pushNamed(context, '/sewaan-bil');
@@ -128,7 +129,7 @@ class _SewaanPageState extends State<SewaanPage> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              backgroundColor: orange,
+                              backgroundColor: yellow,
                             ),
                             onPressed: () {
                               Navigator.pushNamed(context, '/resit');
@@ -161,7 +162,7 @@ class _SewaanPageState extends State<SewaanPage> {
                 width: double.infinity,
                 height: 350,
                 decoration: BoxDecoration(
-                  color: blueGlow,
+                  color: black,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -171,12 +172,15 @@ class _SewaanPageState extends State<SewaanPage> {
                       children: [
                         Text(
                           'Pasar A',
+                          style: TextStyle(color: white, fontSize: 16),
                         ),
                         Text(
                           'RM 40.00',
+                          style: TextStyle(color: white, fontSize: 16),
                         ),
                         Checkbox(
-                          activeColor: Color(0xff3E4095),
+                          activeColor: yellow,
+                          checkColor: black,
                           value: pasarA,
                           onChanged: (value) {
                             setState(() {
@@ -188,19 +192,22 @@ class _SewaanPageState extends State<SewaanPage> {
                     ),
                     Divider(
                       thickness: 2,
-                      color: Color(0xffB3DAF7),
+                      color: grey,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Pasar B',
+                          style: TextStyle(color: white, fontSize: 16),
                         ),
                         Text(
                           'RM 40.00',
+                          style: TextStyle(color: white, fontSize: 16),
                         ),
                         Checkbox(
-                          activeColor: Color(0xff3E4095),
+                          activeColor: yellow,
+                          checkColor: black,
                           value: pasarB,
                           onChanged: (value) {
                             setState(() {
@@ -212,7 +219,7 @@ class _SewaanPageState extends State<SewaanPage> {
                     ),
                     Divider(
                       thickness: 2,
-                      color: Color(0xffB3DAF7),
+                      color: grey,
                     ),
                   ],
                 ),
@@ -227,9 +234,9 @@ class _SewaanPageState extends State<SewaanPage> {
                 height: 48,
                 child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: orange,
+                    backgroundColor: yellow,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
+                      borderRadius: BorderRadius.circular(15),
                     ),
                   ),
                   onPressed: () {
@@ -251,10 +258,14 @@ class _SewaanPageState extends State<SewaanPage> {
     }
 
     return Scaffold(
-      body: Column(
-        children: [
-          header(),
-        ],
+      backgroundColor: white,
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }

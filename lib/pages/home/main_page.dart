@@ -17,10 +17,11 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     Widget customBottomNav() {
       return BottomAppBar(
+        elevation: 0,
         child: BottomNavigationBar(
-          unselectedItemColor: purple,
-          selectedItemColor: orange,
-          backgroundColor: white,
+          unselectedItemColor: Colors.grey,
+          selectedItemColor: Colors.black,
+          backgroundColor: yellow.withOpacity(0.1),
           elevation: 0,
           currentIndex: currentIndex,
           onTap: (value) {
@@ -32,42 +33,83 @@ class _MainPageState extends State<MainPage> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
+              activeIcon: Container(
+                margin: EdgeInsets.only(
+                  top: 20,
+                  bottom: 10,
+                ),
+                child: Image.asset(
+                  'assets/icon_utama.png',
+                  color: Colors.black,
+                ),
+              ),
               icon: Container(
                 margin: EdgeInsets.only(
                   top: 20,
                   bottom: 10,
                 ),
-                child: Image.asset('assets/icon_utama.png'),
+                child: Image.asset('assets/icon_utama.png', color: Colors.grey),
               ),
               label: 'Utama',
             ),
             BottomNavigationBarItem(
+              activeIcon: Container(
+                margin: EdgeInsets.only(
+                  top: 20,
+                  bottom: 10,
+                ),
+                child: Image.asset(
+                  'assets/help.png',width: 30,
+                  color: Colors.black,
+                ),
+              ),
               icon: Container(
                 margin: EdgeInsets.only(
                   top: 20,
                   bottom: 10,
                 ),
-                child: Image.asset('assets/icon_utama.png'),
+                child: Image.asset('assets/help.png',width: 30,color: Colors.grey),
               ),
               label: 'FAQs',
             ),
             BottomNavigationBarItem(
+              activeIcon: Container(
+                margin: EdgeInsets.only(
+                  top: 20,
+                  bottom: 10,
+                ),
+                child: Image.asset(
+                  'assets/user.png',width: 30,
+                  color: Colors.black,
+                ),
+              ),
               icon: Container(
                 margin: EdgeInsets.only(
                   top: 20,
                   bottom: 10,
                 ),
-                child: Image.asset('assets/icon_profile.png'),
+                child: Image.asset('assets/user.png',width: 30,color: Colors.grey),
               ),
               label: 'Profil',
             ),
             BottomNavigationBarItem(
+              activeIcon: Container(
+                margin: EdgeInsets.only(
+                  top: 20,
+                  bottom: 10,
+                ),
+                child: Image.asset(
+                  'assets/gear.png',
+                  width: 30,
+                  color: Colors.black,
+                ),
+              ),
               icon: Container(
                 margin: EdgeInsets.only(
                   top: 20,
                   bottom: 10,
                 ),
-                child: Image.asset('assets/icon_utama.png'),
+                child: Image.asset('assets/gear.png',width: 30,color: Colors.grey),
               ),
               label: 'Tetapan',
             ),

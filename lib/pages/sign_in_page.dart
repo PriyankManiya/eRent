@@ -10,7 +10,7 @@ class SignInPage extends StatelessWidget {
         children: [
           Icon(
             Icons.person,
-            color: Colors.black.withOpacity(0.7),
+            color: yellow.withOpacity(0.7),
             size: 24,
           ),
           SizedBox(
@@ -18,8 +18,8 @@ class SignInPage extends StatelessWidget {
           ),
           Expanded(
             child: TextFormField(
-              style: textBlack,
-              cursorColor: Colors.black,
+              style: textWhite,
+              cursorColor: yellow,
               decoration: InputDecoration.collapsed(
                 hintText: 'Your Email Address',
                 hintStyle: textGrey,
@@ -35,7 +35,7 @@ class SignInPage extends StatelessWidget {
         children: [
           Icon(
             Icons.lock,
-            color: Colors.black.withOpacity(0.7),
+            color: yellow.withOpacity(0.7),
             size: 24,
           ),
           SizedBox(
@@ -43,8 +43,8 @@ class SignInPage extends StatelessWidget {
           ),
           Expanded(
             child: TextFormField(
-              style: textBlack,
-              cursorColor: Colors.black,
+              style: textWhite,
+              cursorColor: yellow,
               decoration: InputDecoration.collapsed(
                 hintText: 'Kata Laluan',
                 hintStyle: textGrey,
@@ -56,18 +56,17 @@ class SignInPage extends StatelessWidget {
     }
 
     Widget button() {
-      return Padding(
-        padding: const EdgeInsets.only(top: 20),
+      return Expanded(
         child: RaisedButton(
-            color: Colors.black,
+            color: yellow,
             shape: RoundedRectangleBorder(
-      borderRadius: new BorderRadius.circular(5),
-   ),
+              borderRadius: new BorderRadius.circular(5),
+            ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 13),
+              padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 11),
               child: Text(
                 "Log Masuk",
-                style: textWhite.copyWith(
+                style: textBlack.copyWith(
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                 ),
@@ -103,8 +102,10 @@ class SignInPage extends StatelessWidget {
     }
 
     return Scaffold(
+      backgroundColor: Colors.black,
       resizeToAvoidBottomInset: false,
       body: SafeArea(
+        bottom: false,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -125,7 +126,7 @@ class SignInPage extends StatelessWidget {
                   ),
                   Text(
                     'SEWA',
-                    style: textBlack.copyWith(
+                    style: textWhite.copyWith(
                       fontSize: 56,
                       fontWeight: bold,
                     ),
@@ -143,16 +144,9 @@ class SignInPage extends StatelessWidget {
                   vertical: 30,
                 ),
                 decoration: BoxDecoration(
-                  color: white,
+                  color: Colors.black,
                   borderRadius: BorderRadius.circular(5),
                   // border: Border.all(color: Colors.black.withOpacity(0.3)),
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 6,
-                      offset: Offset(1, 10),
-                      color: grey.withOpacity(0.4),
-                    ),
-                  ],
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -180,10 +174,18 @@ class SignInPage extends StatelessWidget {
                         child: passwordInput(),
                       ),
                     ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        button(),
+                      ],
+                    ),
                   ],
                 ),
               ),
-              button(),
             ],
           ),
         ),

@@ -21,6 +21,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -48,7 +49,7 @@ class _SplashPageState extends State<SplashPage> {
                 ),
                 Text(
                   'SEWA',
-                  style: textBlack.copyWith(
+                  style: textWhite.copyWith(
                     fontSize: 50,
                   ),
                 ),
@@ -62,7 +63,7 @@ class _SplashPageState extends State<SplashPage> {
                 horizontal: 30,
               ),
               child: LinearProgressIndicator(
-                color: Colors.black,
+                color: yellow,
                 backgroundColor: Colors.grey.withOpacity(0.5),
               ),
             )
