@@ -16,7 +16,7 @@ TextStyle textYellow = GoogleFonts.ubuntu(
 );
 
 TextStyle textBlack = GoogleFonts.ubuntu(
-  color: purple,
+  color: black,
 );
 
 TextStyle textWhite = GoogleFonts.ubuntu(

@@ -21,7 +21,7 @@ class UtamaPage extends StatelessWidget {
                   height: 119,
                   margin: EdgeInsets.only(top: 282),
                   decoration: BoxDecoration(
-                    color: yellow,
+                    color: black,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Column(
@@ -30,14 +30,14 @@ class UtamaPage extends StatelessWidget {
                       Image.asset(
                         'assets/icon_aset.png',
                         height: 40,
-                        color: Colors.black,
+                        color: Colors.yellow,
                       ),
                       SizedBox(
                         height: 15,
                       ),
                       Text(
                         'Permohonan\nAset',
-                        style: textBlack.copyWith(
+                        style: textYellow.copyWith(
                           fontSize: 16,
                           fontWeight: medium,
                         ),
@@ -59,7 +59,7 @@ class UtamaPage extends StatelessWidget {
                   height: 119,
                   margin: EdgeInsets.only(top: 282),
                   decoration: BoxDecoration(
-                    color: yellow,
+                    color: black,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Column(
@@ -68,14 +68,14 @@ class UtamaPage extends StatelessWidget {
                       Image.asset(
                         'assets/icon_aset.png',
                         height: 40,
-                        color: Colors.black,
+                        color: Colors.yellow,
                       ),
                       SizedBox(
                         height: 15,
                       ),
                       Text(
                         'Status\nPermohonan',
-                        style: textBlack.copyWith(
+                        style: textYellow.copyWith(
                           fontSize: 16,
                           fontWeight: medium,
                         ),
@@ -101,7 +101,7 @@ class UtamaPage extends StatelessWidget {
                   width: 150,
                   height: 119,
                   decoration: BoxDecoration(
-                    color: yellow,
+                    color: black,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Column(
@@ -110,14 +110,14 @@ class UtamaPage extends StatelessWidget {
                       Image.asset(
                         'assets/icon_sewaan.png',
                         height: 40,
-                        color: Colors.black,
+                        color: Colors.yellow,
                       ),
                       SizedBox(
                         height: 15,
                       ),
                       Text(
                         'Pembayaran\nSewaan',
-                        style: textBlack.copyWith(
+                        style: textYellow.copyWith(
                           fontSize: 16,
                           fontWeight: medium,
                         ),
@@ -138,7 +138,7 @@ class UtamaPage extends StatelessWidget {
                   width: 150,
                   height: 119,
                   decoration: BoxDecoration(
-                    color: yellow,
+                    color: black,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Column(
@@ -147,14 +147,14 @@ class UtamaPage extends StatelessWidget {
                       Image.asset(
                         'assets/icon_sewaan.png',
                         height: 40,
-                        color: Colors.black,
+                        color: Colors.yellow,
                       ),
                       SizedBox(
                         height: 15,
                       ),
                       Text(
                         'Permohonan\neLESEN',
-                        style: textBlack.copyWith(
+                        style: textYellow.copyWith(
                           fontSize: 16,
                           fontWeight: medium,
                         ),
@@ -176,7 +176,7 @@ class UtamaPage extends StatelessWidget {
           Container(
             height: 383,
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: yellow,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(45),
                 bottomRight: Radius.circular(45),
@@ -192,14 +192,14 @@ class UtamaPage extends StatelessWidget {
                     children: [
                       Text(
                         'e- ',
-                        style: textYellow.copyWith(
+                        style: textBlack.copyWith(
                           fontSize: 56,
                           fontWeight: bold,
                         ),
                       ),
                       Text(
                         'SEWA',
-                        style: textWhite.copyWith(
+                        style: textBlack.copyWith(
                           fontSize: 56,
                           fontWeight: bold,
                         ),
@@ -213,7 +213,7 @@ class UtamaPage extends StatelessWidget {
                     padding: EdgeInsets.only(left: 15),
                     child: Text(
                       'Hi, Ali',
-                      style: textWhite.copyWith(
+                      style: textBlack.copyWith(
                         fontSize: 26,
                       ),
                     ),
@@ -224,7 +224,7 @@ class UtamaPage extends StatelessWidget {
                   Center(
                     child: Text(
                       'Sila Pilih Servis',
-                      style: textWhite.copyWith(
+                      style: textBlack.copyWith(
                         fontSize: 20,
                         fontWeight: bold,
                       ),
