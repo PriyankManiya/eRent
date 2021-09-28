@@ -27,7 +27,6 @@ class _MainPageState extends State<MainPage> {
           onTap: (value) {
             print(value);
             setState(() {
-              
               currentIndex = value;
             });
           },
@@ -40,7 +39,8 @@ class _MainPageState extends State<MainPage> {
                   bottom: 10,
                 ),
                 child: Image.asset(
-                  'assets/icon_utama.png',
+                  'assets/home.png',
+                  width: 30,
                   color: Colors.black,
                 ),
               ),
@@ -49,7 +49,8 @@ class _MainPageState extends State<MainPage> {
                   top: 20,
                   bottom: 10,
                 ),
-                child: Image.asset('assets/icon_utama.png', color: Colors.grey),
+                child: Image.asset('assets/home.png',
+                    width: 30, color: Colors.grey),
               ),
               label: 'Utama',
             ),
@@ -60,7 +61,8 @@ class _MainPageState extends State<MainPage> {
                   bottom: 10,
                 ),
                 child: Image.asset(
-                  'assets/help.png',width: 30,
+                  'assets/help.png',
+                  width: 30,
                   color: Colors.black,
                 ),
               ),
@@ -69,7 +71,8 @@ class _MainPageState extends State<MainPage> {
                   top: 20,
                   bottom: 10,
                 ),
-                child: Image.asset('assets/help.png',width: 30,color: Colors.grey),
+                child: Image.asset('assets/help.png',
+                    width: 30, color: Colors.grey),
               ),
               label: 'FAQs',
             ),
@@ -80,7 +83,8 @@ class _MainPageState extends State<MainPage> {
                   bottom: 10,
                 ),
                 child: Image.asset(
-                  'assets/user.png',width: 30,
+                  'assets/user.png',
+                  width: 30,
                   color: Colors.black,
                 ),
               ),
@@ -89,7 +93,8 @@ class _MainPageState extends State<MainPage> {
                   top: 20,
                   bottom: 10,
                 ),
-                child: Image.asset('assets/user.png',width: 30,color: Colors.grey),
+                child: Image.asset('assets/user.png',
+                    width: 30, color: Colors.grey),
               ),
               label: 'Profil',
             ),
@@ -110,7 +115,8 @@ class _MainPageState extends State<MainPage> {
                   top: 20,
                   bottom: 10,
                 ),
-                child: Image.asset('assets/gear.png',width: 30,color: Colors.grey),
+                child: Image.asset('assets/gear.png',
+                    width: 30, color: Colors.grey),
               ),
               label: 'Tetapan',
             ),

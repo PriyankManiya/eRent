@@ -11,7 +11,7 @@ class CariPermohonan extends StatelessWidget {
         height: 50,
         margin: EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
-          color: Color(0xffADADAD),
+          color: yellow,
           borderRadius: BorderRadius.circular(6),
         ),
         child: Row(
@@ -19,13 +19,13 @@ class CariPermohonan extends StatelessWidget {
           children: [
             Text(
               'Carian',
-              style: textWhite.copyWith(
+              style: textBlack.copyWith(
                 fontSize: 24,
               ),
             ),
             Icon(
               Icons.search,
-              color: Color(0xffFFFFFF),
+              color: black,
               size: 34,
             ),
           ],
@@ -55,7 +55,7 @@ class CariPermohonan extends StatelessWidget {
               ),
             ),
           ),
-          Text('Pasar A'),
+          Text('Pasar A',style: textBlack.copyWith(fontSize: 15),),
           Container(
             margin: EdgeInsets.symmetric(
               vertical: 10,
@@ -69,7 +69,7 @@ class CariPermohonan extends StatelessWidget {
               ),
             ),
           ),
-          Text('Pasar B'),
+          Text('Pasar B',style: textBlack.copyWith(fontSize: 15),),
           Container(
             margin: EdgeInsets.symmetric(
               vertical: 10,
@@ -83,7 +83,7 @@ class CariPermohonan extends StatelessWidget {
               ),
             ),
           ),
-          Text('Pasar D'),
+          Text('Pasar D',style: textBlack.copyWith(fontSize: 15),),
         ],
       );
     }
@@ -94,7 +94,7 @@ class CariPermohonan extends StatelessWidget {
           width: double.infinity,
           margin: EdgeInsets.symmetric(horizontal: 20),
           decoration: BoxDecoration(
-            color: Color(0xffFFFFFFF),
+            color: yellow,
             borderRadius: BorderRadius.circular(6),
           ),
           child: Row(
@@ -113,7 +113,7 @@ class CariPermohonan extends StatelessWidget {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -126,30 +126,35 @@ class CariPermohonan extends StatelessWidget {
                 height: 130,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Icon(Icons.arrow_back)),
-                    Text(
-                      'Permohonan Aset',
-                      style: textBlack.copyWith(
-                        fontSize: 26,
-                        fontWeight: bold,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Icon(Icons.arrow_back_ios_new_sharp)),
+                      Text(
+                        'Permohonan Aset',
+                        style: textBlack.copyWith(
+                          fontSize: 26,
+                          fontWeight: bold,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
+              SizedBox(height: 15,),
               buttonCarian(),
+              SizedBox(height: 15,),
               content(),
             ],
           ),
@@ -158,10 +163,13 @@ class CariPermohonan extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Column(
-        children: [
-          header(),
-        ],
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }

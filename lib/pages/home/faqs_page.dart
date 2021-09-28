@@ -11,7 +11,7 @@ class FaqsPage extends StatelessWidget {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -24,7 +24,7 @@ class FaqsPage extends StatelessWidget {
                 height: 107,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -34,7 +34,7 @@ class FaqsPage extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 10),
                     child: Text(
                       'FAQs',
-                      style: textYellow.copyWith(
+                      style: textBlack.copyWith(
                         fontSize: 26,
                         fontWeight: bold,
                       ),
@@ -56,84 +56,84 @@ class FaqsPage extends StatelessWidget {
                 height: 450,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: yellow,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Cara mendapatkan applikasi ini',style:TextStyle(fontSize: 16,color: Colors.white)
+                      'Cara mendapatkan applikasi ini',style:TextStyle(fontSize: 16,color: Colors.black)
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     Text(
-                      'Muat turun di Playstore and Appstrore',style:TextStyle(fontSize: 16,color: Colors.white)
+                      'Muat turun di Playstore and Appstrore',style:TextStyle(fontSize: 16,color: Colors.black)
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Divider(
                       thickness: 2,
-                      color: Colors.grey.withOpacity(0.5),
+                      color: Colors.black.withOpacity(0.5),
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Text(
-                      'Kaedah bayaran di Applikasi',style:TextStyle(fontSize: 16,color: Colors.white)
+                      'Kaedah bayaran di Applikasi',style:TextStyle(fontSize: 16,color: Colors.black)
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     Text(
-                      'ePay, Kat Kredit dan FPX',style:TextStyle(fontSize: 16,color: Colors.white)
+                      'ePay, Kat Kredit dan FPX',style:TextStyle(fontSize: 16,color: Colors.black)
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Divider(
                       thickness: 2,
-                      color: Colors.grey.withOpacity(0.5),
+                      color: Colors.black.withOpacity(0.5),
                     ),
                     SizedBox(
                       height: 13,
                     ),
                     Text(
-                      'Panduan Membayar di Applikasi',style:TextStyle(fontSize: 16,color: Colors.white)
+                      'Panduan Membayar di Applikasi',style:TextStyle(fontSize: 16,color: Colors.black)
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     Text(
-                      'Sila ikuti arahan dibawah ',style:TextStyle(fontSize: 16,color: Colors.white)
+                      'Sila ikuti arahan dibawah ',style:TextStyle(fontSize: 16,color: Colors.black)
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Divider(
                       thickness: 2,
-                      color: Colors.grey.withOpacity(0.5),
+                      color: Colors.black.withOpacity(0.5),
                     ),
                     SizedBox(
                       height: 13,
                     ),
                     Text(
-                      'Lupa Kata Laluan',style:TextStyle(fontSize: 16,color: Colors.white)
+                      'Lupa Kata Laluan',style:TextStyle(fontSize: 16,color: Colors.black)
                     ),
                     SizedBox(
                       height: 20,
                     ),
                     Text(
-                      'Tekan butang Reset',style:TextStyle(fontSize: 16,color: Colors.white)
+                      'Tekan butang Reset',style:TextStyle(fontSize: 16,color: Colors.black)
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Divider(
                       thickness: 2,
-                      color: Colors.grey.withOpacity(0.5),
+                      color: Colors.black.withOpacity(0.5),
                     ),
                   ],
                 ),

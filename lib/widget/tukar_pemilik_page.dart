@@ -9,7 +9,7 @@ class TukarPemilikPage extends StatelessWidget {
         children: [
           Icon(
             Icons.person,
-            color: grey,
+            color: black,
             size: 24,
           ),
           SizedBox(
@@ -17,10 +17,11 @@ class TukarPemilikPage extends StatelessWidget {
           ),
           Expanded(
             child: TextFormField(
-              style: textGrey,
+              cursorColor: black,
+              style: textBlack,
               decoration: InputDecoration.collapsed(
                 hintText: 'Nama',
-                hintStyle: textGrey,
+                hintStyle: textGrey.copyWith(color: Colors.grey[700]),
               ),
             ),
           ),
@@ -33,7 +34,7 @@ class TukarPemilikPage extends StatelessWidget {
         children: [
           Icon(
             Icons.email,
-            color: grey,
+            color: black,
             size: 24,
           ),
           SizedBox(
@@ -41,10 +42,11 @@ class TukarPemilikPage extends StatelessWidget {
           ),
           Expanded(
             child: TextFormField(
-              style: textGrey,
+              cursorColor: black,
+              style: textBlack,
               decoration: InputDecoration.collapsed(
                 hintText: 'Email',
-                hintStyle: textGrey,
+                hintStyle: textGrey.copyWith(color: Colors.grey[700]),
               ),
             ),
           ),
@@ -57,7 +59,7 @@ class TukarPemilikPage extends StatelessWidget {
         children: [
           Icon(
             Icons.phone,
-            color: grey,
+            color: black,
             size: 24,
           ),
           SizedBox(
@@ -65,10 +67,11 @@ class TukarPemilikPage extends StatelessWidget {
           ),
           Expanded(
             child: TextFormField(
-              style: textGrey,
+              cursorColor: black,
+              style: textBlack,
               decoration: InputDecoration.collapsed(
                 hintText: 'No . Telefon',
-                hintStyle: textGrey,
+                hintStyle: textGrey.copyWith(color: Colors.grey[700]),
               ),
             ),
           ),
@@ -81,7 +84,7 @@ class TukarPemilikPage extends StatelessWidget {
         children: [
           Icon(
             Icons.lock,
-            color: grey,
+            color: black,
             size: 24,
           ),
           SizedBox(
@@ -89,10 +92,11 @@ class TukarPemilikPage extends StatelessWidget {
           ),
           Expanded(
             child: TextFormField(
-              style: textGrey,
+              cursorColor: black,
+              style: textBlack,
               decoration: InputDecoration.collapsed(
                 hintText: 'Tapak Sewaan',
-                hintStyle: textGrey,
+                hintStyle: textGrey.copyWith(color: Colors.grey[700]),
               ),
             ),
           ),
@@ -107,7 +111,7 @@ class TukarPemilikPage extends StatelessWidget {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -120,33 +124,36 @@ class TukarPemilikPage extends StatelessWidget {
                 height: 107,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Icon(
-                        Icons.arrow_back_ios_new_sharp,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(
+                          Icons.arrow_back_ios_new_sharp,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 40,
-                    ),
-                    Text(
-                      'Tukar Pemilik Profil',
-                      style: textBlack.copyWith(
-                        fontSize: 26,
-                        fontWeight: bold,
+                      SizedBox(
+                        width: 40,
                       ),
-                    ),
-                  ],
+                      Text(
+                        'Tukar Pemilik Profil',
+                        style: textBlack.copyWith(
+                          fontSize: 26,
+                          fontWeight: bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Container(
@@ -157,7 +164,7 @@ class TukarPemilikPage extends StatelessWidget {
                 ),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: blueGlow,
+                  color: yellow,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -190,7 +197,7 @@ class TukarPemilikPage extends StatelessWidget {
                           width: 117,
                           height: 40,
                           decoration: BoxDecoration(
-                            color: orange.withOpacity(0.8),
+                            color: yellow.withOpacity(0.8),
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(16),
                               bottomRight: Radius.circular(16),
@@ -218,41 +225,64 @@ class TukarPemilikPage extends StatelessWidget {
                         horizontal: 19,
                       ),
                       decoration: BoxDecoration(
-                        color: white,
+                        color: yellow,
                       ),
                       child: Column(
                         children: [
-                          nameInput(),
-                          Divider(
-                            thickness: 1,
-                            color: grey,
+                          Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(color: black),
+                                borderRadius: BorderRadius.circular(5)),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              child: nameInput(),
+                            ),
                           ),
                           SizedBox(
                             height: 30,
                           ),
-                          emailInput(),
-                          Divider(
-                            thickness: 1,
-                            color: grey,
+                          Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(color: black),
+                                borderRadius: BorderRadius.circular(5)),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              child: emailInput(),
+                            ),
                           ),
                           SizedBox(
                             height: 30,
                           ),
-                          teleponInput(),
-                          Divider(
-                            thickness: 1,
-                            color: grey,
+                          Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(color: black),
+                                borderRadius: BorderRadius.circular(5)),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              child: teleponInput(),
+                            ),
                           ),
                           SizedBox(
                             height: 30,
                           ),
-                          passwordInput(),
-                          Divider(
-                            thickness: 1,
-                            color: grey,
+                          Container(
+                            decoration: BoxDecoration(
+                                border: Border.all(color: black),
+                                borderRadius: BorderRadius.circular(5)),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              child: passwordInput(),
+                            ),
                           ),
                         ],
                       ),
+                    ),
+                    SizedBox(
+                      height: 15,
                     ),
                     Container(
                       margin: EdgeInsets.only(
@@ -260,10 +290,10 @@ class TukarPemilikPage extends StatelessWidget {
                         bottom: 10,
                       ),
                       width: 162,
-                      height: 60,
+                      height: 50,
                       child: TextButton(
                         style: TextButton.styleFrom(
-                          backgroundColor: orange,
+                          backgroundColor: black,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6),
                           ),
@@ -273,12 +303,15 @@ class TukarPemilikPage extends StatelessWidget {
                         },
                         child: Text(
                           'Tukar Pemilik',
-                          style: textBlack.copyWith(
+                          style: textWhite.copyWith(
                             fontSize: 20,
                             fontWeight: bold,
                           ),
                         ),
                       ),
+                    ),
+                    SizedBox(
+                      height: 15,
                     ),
                   ],
                 ),
@@ -291,10 +324,13 @@ class TukarPemilikPage extends StatelessWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Column(
-        children: [
-          header(),
-        ],
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }

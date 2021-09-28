@@ -55,69 +55,105 @@ class _PermohonanPageState extends State<PermohonanPage> {
     }
 
     Widget dropItem() {
-      return Container(
-        margin: EdgeInsets.only(top: 30),
-        width: double.infinity,
-        height: 88,
-        decoration: BoxDecoration(
-          color: Color(0xffF1F9FF),
-        ),
-        padding: EdgeInsets.symmetric(vertical: 11, horizontal: 11),
-        child: DropdownButtonHideUnderline(
-          child: DropdownButton<String>(
-            hint: Text('Jenis Harta'),
-            isExpanded: true,
-            iconSize: 36,
-            icon: Icon(Icons.arrow_drop_down),
-            value: value,
-            items: items.map(buildMenuItem).toList(),
-            onChanged: (value) => setState(() => this.value = value),
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25),
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: black,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: DropdownButtonHideUnderline(
+              child: DropdownButton<String>(
+                dropdownColor: black,
+                hint: Text(
+                  'Jenis Harta',
+                  style: textWhite.copyWith(color: white, fontSize: 15),
+                ),
+                isExpanded: true,
+                iconSize: 30,
+                icon: Icon(
+                  Icons.arrow_drop_down,
+                  color: white,
+                ),
+                value: value,
+                style: textWhite.copyWith(),
+                items: items.map(buildMenuItem).toList(),
+                onChanged: (value) => setState(() => this.value = value),
+              ),
+            ),
           ),
         ),
       );
     }
 
     Widget dropItem2() {
-      return Container(
-        margin: EdgeInsets.only(top: 30),
-        width: double.infinity,
-        height: 88,
-        decoration: BoxDecoration(
-          color: Color(0xffF1F9FF),
-        ),
-        padding: EdgeInsets.symmetric(vertical: 11, horizontal: 11),
-        child: DropdownButtonHideUnderline(
-          child: DropdownButton<String>(
-            hint: Text('Seksyen'),
-            isExpanded: true,
-            iconSize: 36,
-            icon: Icon(Icons.arrow_drop_down),
-            value: value2,
-            items: items2.map(buildMenuItem2).toList(),
-            onChanged: (value2) => setState(() => this.value2 = value2),
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25),
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: black,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: DropdownButtonHideUnderline(
+              child: DropdownButton<String>(
+                dropdownColor: black,
+                hint: Text(
+                  'Seksyen',
+                  style: textWhite.copyWith(color: white, fontSize: 15),
+                ),
+                isExpanded: true,
+                iconSize: 30,
+                icon: Icon(
+                  Icons.arrow_drop_down,
+                  color: white,
+                ),
+                style: textWhite.copyWith(),
+                value: value2,
+                items: items2.map(buildMenuItem2).toList(),
+                onChanged: (value2) => setState(() => this.value2 = value2),
+              ),
+            ),
           ),
         ),
       );
     }
 
     Widget dropItem3() {
-      return Container(
-        margin: EdgeInsets.only(top: 30),
-        width: double.infinity,
-        height: 88,
-        decoration: BoxDecoration(
-          color: Color(0xffF1F9FF),
-        ),
-        padding: EdgeInsets.symmetric(vertical: 11, horizontal: 11),
-        child: DropdownButtonHideUnderline(
-          child: DropdownButton<String>(
-            hint: Text('Kawasan'),
-            isExpanded: true,
-            iconSize: 36,
-            icon: Icon(Icons.arrow_drop_down),
-            value: value3,
-            items: items3.map(buildMenuItem3).toList(),
-            onChanged: (value3) => setState(() => this.value3 = value3),
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25),
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: black,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: DropdownButtonHideUnderline(
+              child: DropdownButton<String>(
+                dropdownColor: black,
+                hint: Text(
+                  'Kawasan',
+                  style: textWhite.copyWith(color: white, fontSize: 15),
+                ),
+                isExpanded: true,
+                iconSize: 30,
+                icon: Icon(
+                  Icons.arrow_drop_down,
+                  color: white,
+                ),
+                style: textWhite.copyWith(),
+                value: value3,
+                items: items3.map(buildMenuItem3).toList(),
+                onChanged: (value3) => setState(() => this.value3 = value3),
+              ),
+            ),
           ),
         ),
       );
@@ -132,7 +168,7 @@ class _PermohonanPageState extends State<PermohonanPage> {
         width: 94,
         child: TextButton(
           style: TextButton.styleFrom(
-              backgroundColor: orange,
+              backgroundColor: black,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(6),
               )),
@@ -141,8 +177,8 @@ class _PermohonanPageState extends State<PermohonanPage> {
           },
           child: Text(
             'Cari',
-            style: textBlack.copyWith(
-              fontSize: 20,
+            style: textWhite.copyWith(
+              fontSize: 18,
               fontWeight: bold,
             ),
           ),
@@ -157,7 +193,7 @@ class _PermohonanPageState extends State<PermohonanPage> {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -170,35 +206,38 @@ class _PermohonanPageState extends State<PermohonanPage> {
                 height: 107,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
                 ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 50,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Icon(
-                        Icons.arrow_back_ios_new_sharp,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 50,
                       ),
-                    ),
-                    SizedBox(
-                      width: 50,
-                    ),
-                    Text(
-                      'Permohonan Aset',
-                      style: textBlack.copyWith(
-                        fontSize: 26,
-                        fontWeight: bold,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(
+                          Icons.arrow_back_ios_new_sharp,
+                        ),
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Text(
+                        'Permohonan Aset',
+                        style: textBlack.copyWith(
+                          fontSize: 26,
+                          fontWeight: bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Container(
@@ -209,14 +248,23 @@ class _PermohonanPageState extends State<PermohonanPage> {
                 ),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: blueGlow,
+                  color: yellow,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
                   children: [
                     status(),
+                    SizedBox(
+                      height: 15,
+                    ),
                     dropItem(),
+                    SizedBox(
+                      height: 15,
+                    ),
                     dropItem2(),
+                    SizedBox(
+                      height: 15,
+                    ),
                     dropItem3(),
                     button(),
                   ],
@@ -229,10 +277,13 @@ class _PermohonanPageState extends State<PermohonanPage> {
     }
 
     return Scaffold(
-      body: Column(
-        children: [
-          header(),
-        ],
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }

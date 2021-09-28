@@ -10,7 +10,7 @@ class PermohonanSewa extends StatelessWidget {
         builder: (BuildContext context) => Container(
           width: MediaQuery.of(context).size.width - (2 * 30),
           child: AlertDialog(
-            backgroundColor: white,
+            backgroundColor: yellow,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(6),
             ),
@@ -26,7 +26,7 @@ class PermohonanSewa extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Icon(
                         Icons.close,
-                        color: purple,
+                        color: black,
                       ),
                     ),
                   ),
@@ -34,14 +34,13 @@ class PermohonanSewa extends StatelessWidget {
                   Icon(
                     Icons.check_outlined,
                     size: 72,
-                    color: Color(0xff3E4095),
+                    color: black,
                   ),
                   SizedBox(height: 12),
                   Center(
                     child: Text(
                       'Permohanan anda telah dihantar \nSekiranya anda tidak mendapat  \nsebarang pemakluman dalam tempoh masa tiga (3) bulan dari pihak Majlis. \nMaka permohonan anda secara \nautomatik telah dibatalkan',
                       style: textBlack.copyWith(
-                        color: Color(0xff2699FB),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -61,7 +60,7 @@ class PermohonanSewa extends StatelessWidget {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -74,32 +73,35 @@ class PermohonanSewa extends StatelessWidget {
                 height: 130,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
                 ),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 50,
-                    ),
-                    GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Icon(Icons.arrow_back)),
-                    SizedBox(
-                      width: 100,
-                    ),
-                    Text(
-                      'Pasar A',
-                      style: textBlack.copyWith(
-                        fontSize: 26,
-                        fontWeight: bold,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 50,
                       ),
-                    ),
-                  ],
+                      GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Icon(Icons.arrow_back_ios_new_sharp)),
+                      SizedBox(
+                        width: 100,
+                      ),
+                      Text(
+                        'Pasar A',
+                        style: textBlack.copyWith(
+                          fontSize: 26,
+                          fontWeight: bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Container(
@@ -110,7 +112,7 @@ class PermohonanSewa extends StatelessWidget {
                 ),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Color(0xffEFEFFA),
+                  color: yellow,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Container(
@@ -121,9 +123,7 @@ class PermohonanSewa extends StatelessWidget {
                       Text(
                         'ID',
                         style: TextStyle(
-                          color: Color(
-                            0XFFB1B1D2,
-                          ),
+                          color: black,
                           fontSize: 16,
                         ),
                       ),
@@ -131,14 +131,12 @@ class PermohonanSewa extends StatelessWidget {
                       Text('650327107091'),
                       Divider(
                         thickness: 2,
-                        color: Color(0xffB3DAF7),
+                        color: black,
                       ),
                       Text(
                         'NAMA',
                         style: TextStyle(
-                          color: Color(
-                            0XFFB1B1D2,
-                          ),
+                          color: black,
                           fontSize: 16,
                         ),
                       ),
@@ -146,14 +144,12 @@ class PermohonanSewa extends StatelessWidget {
                       Text('AHMAD FAISAL BIN HJ JUMALI'),
                       Divider(
                         thickness: 2,
-                        color: Color(0xffB3DAF7),
+                        color: black,
                       ),
                       Text(
                         'NO TELEFON',
                         style: TextStyle(
-                          color: Color(
-                            0XFFB1B1D2,
-                          ),
+                          color: black,
                           fontSize: 16,
                         ),
                       ),
@@ -161,14 +157,12 @@ class PermohonanSewa extends StatelessWidget {
                       Text('0192247696'),
                       Divider(
                         thickness: 2,
-                        color: Color(0xffB3DAF7),
+                        color: black,
                       ),
                       Text(
                         'KUMPULAN PENGGUNA',
                         style: TextStyle(
-                          color: Color(
-                            0XFFB1B1D2,
-                          ),
+                          color: black,
                           fontSize: 16,
                         ),
                       ),
@@ -176,7 +170,7 @@ class PermohonanSewa extends StatelessWidget {
                       Text('PENGGUNA SISTEM PENILAIAN'),
                       Divider(
                         thickness: 2,
-                        color: Color(0xffB3DAF7),
+                        color: black,
                       ),
                       SizedBox(height: 30),
                       Container(
@@ -186,23 +180,23 @@ class PermohonanSewa extends StatelessWidget {
                         height: 50,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: orange,
+                            color: black,
                           ),
                         ),
                         child: Row(
                           children: [
-                            Text('Muat naik dokumen'),
+                            Text('Muat naik dokumen',style: textBlack.copyWith(fontSize: 16),),
                             Spacer(),
                             Container(
                               height: 40,
                               child: TextButton(
                                 style: TextButton.styleFrom(
-                                  backgroundColor: orange,
+                                  backgroundColor: black,
                                 ),
                                 onPressed: () {},
                                 child: Text(
                                   'Pilih Fail',
-                                  style: textBlack,
+                                  style: textWhite.copyWith(fontWeight: FontWeight.w600),
                                 ),
                               ),
                             )
@@ -217,23 +211,23 @@ class PermohonanSewa extends StatelessWidget {
                         height: 50,
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: orange,
+                            color: black,
                           ),
                         ),
                         child: Row(
                           children: [
-                            Text('Muat naik dokumen'),
+                            Text('Muat naik dokumen',style: textBlack.copyWith(fontSize: 16),),
                             Spacer(),
                             Container(
                               height: 40,
                               child: TextButton(
                                 style: TextButton.styleFrom(
-                                  backgroundColor: orange,
+                                  backgroundColor: black,
                                 ),
                                 onPressed: () {},
                                 child: Text(
                                   'Pilih Fail',
-                                  style: textBlack,
+                                  style: textWhite.copyWith(fontWeight: FontWeight.w600),
                                 ),
                               ),
                             )
@@ -247,14 +241,14 @@ class PermohonanSewa extends StatelessWidget {
                           height: 50,
                           child: TextButton(
                             style: TextButton.styleFrom(
-                              backgroundColor: orange,
+                              backgroundColor: black,
                             ),
                             onPressed: () {
                               showSuccessDialog();
                             },
                             child: Text(
                               'Mohon',
-                              style: textBlack.copyWith(
+                              style: textWhite.copyWith(
                                 fontSize: 20,
                                 fontWeight: bold,
                               ),
@@ -274,10 +268,13 @@ class PermohonanSewa extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Column(
-        children: [
-          header(),
-        ],
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }

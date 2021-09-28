@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:e_sewa/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -32,7 +33,18 @@ class _WebViewScreenState extends State<WebViewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        backgroundColor: yellow,
+        title: Text(
+          widget.title,
+        ),
+        leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back_ios_new,
+              color: black,
+            )),
       ),
       body: Builder(builder: (BuildContext context) {
         return Stack(
@@ -46,8 +58,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
               onProgress: (int progress) {
                 print("WebView is loading (progress : $progress%)");
               },
-              javascriptChannels: <JavascriptChannel>{
-              },
+              javascriptChannels: <JavascriptChannel>{},
               onPageStarted: (String url) {
                 setState(() {
                   isLoading = true;
@@ -68,8 +79,8 @@ class _WebViewScreenState extends State<WebViewScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         CircularProgressIndicator(
-                          valueColor: new AlwaysStoppedAnimation<Color>(
-                              Colors.black),
+                          valueColor:
+                              new AlwaysStoppedAnimation<Color>(Colors.black),
                         ),
                       ],
                     )),

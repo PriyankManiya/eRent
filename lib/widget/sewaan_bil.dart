@@ -11,7 +11,7 @@ class SewaanBil extends StatelessWidget {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -25,7 +25,7 @@ class SewaanBil extends StatelessWidget {
                 height: 200,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -73,14 +73,14 @@ class SewaanBil extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              backgroundColor: orange,
+                              backgroundColor: black,
                             ),
                             onPressed: () {
                               Navigator.pushNamed(context, '/sewaan-page');
                             },
                             child: Text(
                               'Bayar',
-                              style: textBlack.copyWith(
+                              style: textWhite.copyWith(
                                 fontSize: 12,
                                 fontWeight: semiBold,
                               ),
@@ -121,14 +121,14 @@ class SewaanBil extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              backgroundColor: orange,
+                              backgroundColor: black,
                             ),
                             onPressed: () {
                               Navigator.pushNamed(context, '/resit');
                             },
                             child: Text(
                               'Resit',
-                              style: textBlack.copyWith(
+                              style: textWhite.copyWith(
                                 fontSize: 12,
                                 fontWeight: semiBold,
                               ),
@@ -154,7 +154,7 @@ class SewaanBil extends StatelessWidget {
                 width: double.infinity,
                 height: 350,
                 decoration: BoxDecoration(
-                  color: blueGlow,
+                  color: yellow,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -177,14 +177,14 @@ class SewaanBil extends StatelessWidget {
                         ),
                         TextButton(
                           style: TextButton.styleFrom(
-                            backgroundColor: orange,
+                            backgroundColor: black,
                           ),
                           onPressed: () {
                             Navigator.pushNamed(context, '/invoice');
                           },
                           child: Text(
                             'View',
-                            style: textBlack.copyWith(
+                            style: textWhite.copyWith(
                               fontSize: 16,
                               fontWeight: bold,
                             ),
@@ -197,7 +197,7 @@ class SewaanBil extends StatelessWidget {
                     ),
                     Divider(
                       thickness: 2,
-                      color: Color(0xffB3DAF7),
+                      color: black,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -207,12 +207,12 @@ class SewaanBil extends StatelessWidget {
                         ),
                         TextButton(
                           style: TextButton.styleFrom(
-                            backgroundColor: orange,
+                            backgroundColor: black,
                           ),
                           onPressed: () {},
                           child: Text(
                             'View',
-                            style: textBlack.copyWith(
+                            style: textWhite.copyWith(
                               fontSize: 16,
                               fontWeight: bold,
                             ),
@@ -225,7 +225,7 @@ class SewaanBil extends StatelessWidget {
                     ),
                     Divider(
                       thickness: 2,
-                      color: Color(0xffB3DAF7),
+                      color: black,
                     ),
                   ],
                 ),
@@ -237,10 +237,13 @@ class SewaanBil extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Column(
-        children: [
-          header(),
-        ],
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }

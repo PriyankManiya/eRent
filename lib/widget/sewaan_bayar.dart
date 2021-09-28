@@ -11,7 +11,7 @@ class SewaanBayar extends StatelessWidget {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -24,7 +24,7 @@ class SewaanBayar extends StatelessWidget {
                 height: 107,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -66,7 +66,7 @@ class SewaanBayar extends StatelessWidget {
                 width: double.infinity,
                 height: 421,
                 decoration: BoxDecoration(
-                  color: blueGlow,
+                  color: yellow,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -148,7 +148,7 @@ class SewaanBayar extends StatelessWidget {
                       height: 49,
                       child: TextButton(
                         style: TextButton.styleFrom(
-                          backgroundColor: orange,
+                          backgroundColor: black,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(6),
                           ),
@@ -158,7 +158,7 @@ class SewaanBayar extends StatelessWidget {
                         },
                         child: Text(
                           'Teruskan',
-                          style: textBlack.copyWith(
+                          style: textWhite.copyWith(
                             fontSize: 20,
                             fontWeight: bold,
                           ),
@@ -176,10 +176,13 @@ class SewaanBayar extends StatelessWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Column(
-        children: [
-          header(),
-        ],
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }

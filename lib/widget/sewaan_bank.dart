@@ -10,7 +10,7 @@ class SewaanBank extends StatelessWidget {
         builder: (BuildContext context) => Container(
           width: MediaQuery.of(context).size.width - (2 * 30),
           child: AlertDialog(
-            backgroundColor: white,
+            backgroundColor: yellow,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(6),
             ),
@@ -25,7 +25,7 @@ class SewaanBank extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Icon(
                         Icons.close,
-                        color: purple,
+                        color: black,
                       ),
                     ),
                   ),
@@ -33,14 +33,13 @@ class SewaanBank extends StatelessWidget {
                   Icon(
                     Icons.check_outlined,
                     size: 72,
-                    color: Color(0xff2699FB),
+                    color: black,
                   ),
                   SizedBox(height: 12),
                   Center(
                     child: Text(
                       'Bayaran Anda Berjaya !',
                       style: textBlack.copyWith(
-                        color: Color(0xff2699FB),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -63,7 +62,7 @@ class SewaanBank extends StatelessWidget {
                 height: 107,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: yellow,
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 6,
@@ -75,28 +74,32 @@ class SewaanBank extends StatelessWidget {
                   //   bottomLeft: Radius.circular(80),
                   // ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Icon(
-                        Icons.arrow_back_ios_new_sharp,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 15),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(
+                          Icons.arrow_back_ios_new_sharp,
+                          color: black,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 40,
-                    ),
-                    Text(
-                      'Online Banking (e-Sewa)',
-                      style: textBlack.copyWith(
-                        fontSize: 26,
-                        fontWeight: bold,
+                      SizedBox(
+                        width: 40,
                       ),
-                    ),
-                  ],
+                      Text(
+                        'Online Banking (e-Sewa)',
+                        style: textBlack.copyWith(
+                          fontSize: 26,
+                          fontWeight: bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -180,7 +183,7 @@ class SewaanBank extends StatelessWidget {
             height: 40,
             child: TextButton(
               style: TextButton.styleFrom(
-                backgroundColor: Colors.red,
+                backgroundColor: yellow,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(6),
                 ),
@@ -214,10 +217,13 @@ class SewaanBank extends StatelessWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Column(
-        children: [
-          header(),
-        ],
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }

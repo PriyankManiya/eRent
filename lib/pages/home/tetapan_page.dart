@@ -19,7 +19,7 @@ class _TetapanPageState extends State<TetapanPage> {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -32,7 +32,7 @@ class _TetapanPageState extends State<TetapanPage> {
                 height: 107,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: black,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -40,7 +40,7 @@ class _TetapanPageState extends State<TetapanPage> {
                 child: Center(
                   child: Text(
                     'Tetapan',
-                    style: textYellow.copyWith(
+                    style: textBlack.copyWith(
                       fontSize: 26,
                       fontWeight: bold,
                     ),
@@ -61,7 +61,7 @@ class _TetapanPageState extends State<TetapanPage> {
                 height: 450,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: black,
+                  color: yellow,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -73,14 +73,14 @@ class _TetapanPageState extends State<TetapanPage> {
                       ),
                       height: 56,
                       decoration: BoxDecoration(
-                          color: yellow,
+                          color: black,
                           borderRadius: BorderRadius.circular(15)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             'Notifikasi',
-                            style: textBlack.copyWith(
+                            style: textYellow.copyWith(
                                 fontWeight: bold, fontSize: 16),
                           ),
                           Transform.scale(
@@ -92,8 +92,8 @@ class _TetapanPageState extends State<TetapanPage> {
                                   isNotified = value;
                                 });
                               },
-                              trackColor: Colors.grey[600],
-                              activeColor: Colors.black,
+                              trackColor:yellow,
+                              activeColor: Colors.green,
                             ),
                           )
                         ],
@@ -106,14 +106,14 @@ class _TetapanPageState extends State<TetapanPage> {
                       ),
                       height: 56,
                       decoration: BoxDecoration(
-                          color: yellow,
+                          color: black,
                           borderRadius: BorderRadius.circular(15)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             'Bahasa',
-                            style: textBlack.copyWith(
+                            style: textYellow.copyWith(
                                 fontWeight: bold, fontSize: 16),
                           ),
                           Transform.scale(
@@ -125,8 +125,8 @@ class _TetapanPageState extends State<TetapanPage> {
                                   isBahasa = value;
                                 });
                               },
-                              trackColor: Colors.grey[600],
-                              activeColor: Colors.black,
+                              trackColor: yellow,
+                              activeColor: Colors.green,
                             ),
                           )
                         ],
@@ -137,7 +137,7 @@ class _TetapanPageState extends State<TetapanPage> {
                     ),
                     Text(
                       'Version 1.0',
-                      style: textWhite.copyWith(
+                      style: textBlack.copyWith(
                         fontSize: 13,
                         fontWeight: bold,
                       ),
@@ -146,7 +146,7 @@ class _TetapanPageState extends State<TetapanPage> {
                       height: 17,
                     ),
                     RaisedButton(
-                        color: yellow,
+                        color: black,
                         shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(5),
                         ),
@@ -155,7 +155,7 @@ class _TetapanPageState extends State<TetapanPage> {
                               horizontal: 5, vertical: 11),
                           child: Text(
                             "Log Keluar",
-                            style: textBlack.copyWith(
+                            style: textWhite.copyWith(
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
                             ),

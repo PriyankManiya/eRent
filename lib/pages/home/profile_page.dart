@@ -11,7 +11,7 @@ class ProfilePage extends StatelessWidget {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -24,7 +24,7 @@ class ProfilePage extends StatelessWidget {
                 height: 107,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -32,7 +32,7 @@ class ProfilePage extends StatelessWidget {
                 child: Center(
                   child: Text(
                     'Profil',
-                    style: textYellow.copyWith(
+                    style: textBlack.copyWith(
                       fontSize: 26,
                       fontWeight: bold,
                     ),
@@ -49,7 +49,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: black,
+                      color: yellow,
                       borderRadius: BorderRadius.circular(25),
                     ),
                     child: Column(
@@ -82,13 +82,13 @@ class ProfilePage extends StatelessWidget {
                                 width: 32,
                                 height: 32,
                                 decoration: BoxDecoration(
-                                  color: yellow,
+                                  color: black,
                                   borderRadius: BorderRadius.circular(100),
                                 ),
                                 child: Center(
                                   child: Icon(
                                     Icons.person,
-                                    color: black,
+                                    color: yellow,
                                   ),
                                 ),
                               ),
@@ -102,7 +102,7 @@ class ProfilePage extends StatelessWidget {
                                     'Ali Abu',
                                     style: textWhite.copyWith(
                                         fontWeight: bold,
-                                        color: white,
+                                        color: black,
                                         fontSize: 16),
                                   ),
                                   SizedBox(
@@ -112,7 +112,7 @@ class ProfilePage extends StatelessWidget {
                                     'Petaling Jaya',
                                     style: textWhite.copyWith(
                                         fontWeight: bold,
-                                        color: white,
+                                        color: black,
                                         fontSize: 12),
                                   ),
                                 ],
@@ -122,14 +122,14 @@ class ProfilePage extends StatelessWidget {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                    color: yellow,
+                                    color: black,
                                     borderRadius: BorderRadius.circular(50)),
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 8, vertical: 5),
                                   child: Text(
                                     'Status',
-                                    style: textBlack.copyWith(
+                                    style: textYellow.copyWith(
                                       fontSize: 14,
                                       fontWeight: bold,
                                     ),

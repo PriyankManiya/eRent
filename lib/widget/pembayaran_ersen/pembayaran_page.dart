@@ -12,7 +12,7 @@ class PemabayaranElsen extends StatelessWidget {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -25,7 +25,7 @@ class PemabayaranElsen extends StatelessWidget {
                 height: 130,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -39,7 +39,7 @@ class PemabayaranElsen extends StatelessWidget {
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: Icon(Icons.arrow_back_ios_new_sharp)),
                     SizedBox(
                       width: 100,
                     ),
@@ -61,7 +61,7 @@ class PemabayaranElsen extends StatelessWidget {
                 ),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: Color(0xffEFEFFA),
+                  color: yellow,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -79,6 +79,7 @@ class PemabayaranElsen extends StatelessWidget {
                             children: [
                               Text(
                                 'Tarikh Mula Sewaan',
+                                style: textBlack.copyWith(fontSize:16)
                               ),
                               Container(
                                 width: 152,
@@ -86,7 +87,7 @@ class PemabayaranElsen extends StatelessWidget {
                                 margin: EdgeInsets.only(top: 9),
                                 child: TextButton(
                                   style: TextButton.styleFrom(
-                                      backgroundColor: white,
+                                      backgroundColor: black,
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(17))),
@@ -117,7 +118,7 @@ class PemabayaranElsen extends StatelessWidget {
                                   },
                                   child: Text(
                                     'Date',
-                                    style: textBlack.copyWith(
+                                    style: textWhite.copyWith(
                                       fontWeight: bold,
                                     ),
                                   ),
@@ -128,6 +129,7 @@ class PemabayaranElsen extends StatelessWidget {
                               ),
                               Text(
                                 'Harga Sewa Bulanan',
+                                style: textBlack.copyWith(fontSize:16)
                               ),
                               Container(
                                 width: 94,
@@ -135,10 +137,10 @@ class PemabayaranElsen extends StatelessWidget {
                                 margin: EdgeInsets.only(top: 9),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(17),
-                                  color: Color(0xffFFFFFF),
+                                  color: black,
                                 ),
                                 child: Center(
-                                  child: Text('RM 140'),
+                                  child: Text('RM 140',style: textWhite.copyWith(  fontWeight: bold,),),
                                 ),
                               ),
                             ],
@@ -147,6 +149,7 @@ class PemabayaranElsen extends StatelessWidget {
                             children: [
                               Text(
                                 'Tarikh Mula Sewaan',
+                                style: textBlack.copyWith(fontSize:16)
                               ),
                               Container(
                                 width: 152,
@@ -154,7 +157,7 @@ class PemabayaranElsen extends StatelessWidget {
                                 margin: EdgeInsets.only(top: 9),
                                 child: TextButton(
                                   style: TextButton.styleFrom(
-                                      backgroundColor: white,
+                                      backgroundColor: black,
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(17))),
@@ -185,7 +188,7 @@ class PemabayaranElsen extends StatelessWidget {
                                   },
                                   child: Text(
                                     'Date',
-                                    style: textBlack.copyWith(
+                                    style: textWhite.copyWith(
                                       fontWeight: bold,
                                     ),
                                   ),
@@ -210,7 +213,7 @@ class PemabayaranElsen extends StatelessWidget {
                               horizontal: 11,
                               vertical: 6,
                             ),
-                            backgroundColor: orange,
+                            backgroundColor: black,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(6),
                             ),
@@ -220,7 +223,7 @@ class PemabayaranElsen extends StatelessWidget {
                           },
                           child: Text(
                             'Tempah',
-                            style: textBlack.copyWith(
+                            style: textWhite.copyWith(
                               fontSize: 20,
                               fontWeight: bold,
                             ),
@@ -238,10 +241,13 @@ class PemabayaranElsen extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Column(
-        children: [
-          header(),
-        ],
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }

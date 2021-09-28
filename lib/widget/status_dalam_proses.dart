@@ -11,7 +11,7 @@ class StatusDalamProses extends StatelessWidget {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -25,7 +25,7 @@ class StatusDalamProses extends StatelessWidget {
                 height: 200,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -73,14 +73,14 @@ class StatusDalamProses extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              backgroundColor: orange,
+                              backgroundColor: black,
                             ),
                             onPressed: () {
                               Navigator.pushNamed(context, '/status-page');
                             },
                             child: Text(
                               'Serahan',
-                              style: textBlack.copyWith(
+                              style: textWhite.copyWith(
                                 fontSize: 12,
                                 fontWeight: semiBold,
                               ),
@@ -120,14 +120,14 @@ class StatusDalamProses extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              backgroundColor: orange,
+                              backgroundColor: black,
                             ),
                             onPressed: () {
                               Navigator.pushNamed(context, '/status-terima');
                             },
                             child: Text(
                               'Terima',
-                              style: textBlack.copyWith(
+                              style: textWhite.copyWith(
                                 fontSize: 12,
                                 fontWeight: semiBold,
                               ),
@@ -153,7 +153,7 @@ class StatusDalamProses extends StatelessWidget {
                 width: double.infinity,
                 height: 350,
                 decoration: BoxDecoration(
-                  color: blueGlow,
+                  color: yellow,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -166,50 +166,48 @@ class StatusDalamProses extends StatelessWidget {
                         children: [
                           Text(
                             'Jenis',
+                            style: textBlack.copyWith(fontSize: 15),
                           ),
                           Spacer(),
-                          Text('Status')
+                          Text('Status',
+                              style: textBlack.copyWith(fontSize: 15))
                         ],
                       ),
                     ),
                     SizedBox(height: 13),
                     Divider(
                       thickness: 2,
-                      color: Color(0xffB3DAF7),
+                      color: black,
                     ),
                     SizedBox(height: 13),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          'Pasar A',
-                        ),
-                        Text(
-                          'Sedang di Proses oleh Pegawai',
-                        )
+                        Text('Pasar A',
+                            style: textBlack.copyWith(fontSize: 15)),
+                        Text('Sedang di Proses oleh Pegawai',
+                            style: textBlack.copyWith(fontSize: 15))
                       ],
                     ),
                     SizedBox(height: 13),
                     Divider(
                       thickness: 2,
-                      color: Color(0xffB3DAF7),
+                      color: black,
                     ),
                     SizedBox(height: 13),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          'Pasar B',
-                        ),
-                        Text(
-                          'Sedang di Proses oleh Pegawai',
-                        )
+                        Text('Pasar B',
+                            style: textBlack.copyWith(fontSize: 15)),
+                        Text('Sedang di Proses oleh Pegawai',
+                            style: textBlack.copyWith(fontSize: 15))
                       ],
                     ),
                     SizedBox(height: 13),
                     Divider(
                       thickness: 2,
-                      color: Color(0xffB3DAF7),
+                      color: black,
                     ),
                   ],
                 ),
@@ -221,10 +219,13 @@ class StatusDalamProses extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Column(
-        children: [
-          header(),
-        ],
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }

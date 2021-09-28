@@ -11,7 +11,7 @@ class StatusPage extends StatelessWidget {
             height: 246,
             width: double.infinity,
             decoration: BoxDecoration(
-              color: yellow,
+              color: black,
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(36),
                 bottomLeft: Radius.circular(36),
@@ -25,7 +25,7 @@ class StatusPage extends StatelessWidget {
                 height: 200,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  color: white,
+                  color: yellow,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(80),
                   ),
@@ -95,14 +95,14 @@ class StatusPage extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              backgroundColor: orange,
+                              backgroundColor: black,
                             ),
                             onPressed: () {
                               Navigator.pushNamed(context, '/dalam-proses');
                             },
                             child: Text(
                               'Dalam Proses',
-                              style: textBlack.copyWith(
+                              style: textWhite.copyWith(
                                 fontSize: 12,
                                 fontWeight: semiBold,
                               ),
@@ -120,14 +120,14 @@ class StatusPage extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              backgroundColor: orange,
+                              backgroundColor: black,
                             ),
                             onPressed: () {
                               Navigator.pushNamed(context, '/status-terima');
                             },
                             child: Text(
                               'Terima',
-                              style: textBlack.copyWith(
+                              style: textWhite.copyWith(
                                 fontSize: 12,
                                 fontWeight: semiBold,
                               ),
@@ -153,7 +153,7 @@ class StatusPage extends StatelessWidget {
                 width: double.infinity,
                 height: 350,
                 decoration: BoxDecoration(
-                  color: blueGlow,
+                  color: yellow,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -163,7 +163,7 @@ class StatusPage extends StatelessWidget {
                     Icon(
                       Icons.warning,
                       size: 43,
-                      color: Color(0xff14466E),
+                      color: black,
                     ),
                     SizedBox(
                       height: 32,
@@ -171,7 +171,7 @@ class StatusPage extends StatelessWidget {
                     Text(
                       'Anda tidak mempunyai apa-apa\nSerahan pada waktu ini',
                       style: TextStyle(
-                        color: Color(0xff2699FB),
+                        color: black,
                       ),
                       textAlign: TextAlign.center,
                     )
@@ -185,10 +185,13 @@ class StatusPage extends StatelessWidget {
     }
 
     return Scaffold(
-      body: Column(
-        children: [
-          header(),
-        ],
+      body: Container(
+        color: yellow.withOpacity(0.1),
+        child: Column(
+          children: [
+            header(),
+          ],
+        ),
       ),
     );
   }
