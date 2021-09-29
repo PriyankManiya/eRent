@@ -1,7 +1,24 @@
 import 'package:e_sewa/theme.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
-class PermohonanSewa extends StatelessWidget {
+class PermohonanSewa extends StatefulWidget {
+  @override
+  _PermohonanSewaState createState() => _PermohonanSewaState();
+}
+
+class _PermohonanSewaState extends State<PermohonanSewa> {
+  String? filePath;
+  pickFile() async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles();
+    if (result != null) {
+      filePath = result.files.single.path;
+      print("Sucess :: $filePath");
+    } else {
+      print("Data is Null");
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     Future<void> showSuccessDialog() async {
@@ -40,8 +57,7 @@ class PermohonanSewa extends StatelessWidget {
                   Center(
                     child: Text(
                       'Permohanan anda telah dihantar \nSekiranya anda tidak mendapat  \nsebarang pemakluman dalam tempoh masa tiga (3) bulan dari pihak Majlis. \nMaka permohonan anda secara \nautomatik telah dibatalkan',
-                      style: textBlack.copyWith(
-                      ),
+                      style: textBlack.copyWith(),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -185,7 +201,10 @@ class PermohonanSewa extends StatelessWidget {
                         ),
                         child: Row(
                           children: [
-                            Text('Muat naik dokumen',style: textBlack.copyWith(fontSize: 16),),
+                            Text(
+                              'Muat naik dokumen',
+                              style: textBlack.copyWith(fontSize: 16),
+                            ),
                             Spacer(),
                             Container(
                               height: 40,
@@ -193,10 +212,13 @@ class PermohonanSewa extends StatelessWidget {
                                 style: TextButton.styleFrom(
                                   backgroundColor: black,
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  pickFile();
+                                },
                                 child: Text(
                                   'Pilih Fail',
-                                  style: textWhite.copyWith(fontWeight: FontWeight.w600),
+                                  style: textWhite.copyWith(
+                                      fontWeight: FontWeight.w600),
                                 ),
                               ),
                             )
@@ -216,7 +238,10 @@ class PermohonanSewa extends StatelessWidget {
                         ),
                         child: Row(
                           children: [
-                            Text('Muat naik dokumen',style: textBlack.copyWith(fontSize: 16),),
+                            Text(
+                              'Muat naik dokumen',
+                              style: textBlack.copyWith(fontSize: 16),
+                            ),
                             Spacer(),
                             Container(
                               height: 40,
@@ -224,10 +249,13 @@ class PermohonanSewa extends StatelessWidget {
                                 style: TextButton.styleFrom(
                                   backgroundColor: black,
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  pickFile();
+                                },
                                 child: Text(
                                   'Pilih Fail',
-                                  style: textWhite.copyWith(fontWeight: FontWeight.w600),
+                                  style: textWhite.copyWith(
+                                      fontWeight: FontWeight.w600),
                                 ),
                               ),
                             )

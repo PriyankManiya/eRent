@@ -209,7 +209,9 @@ class SewaanBil extends StatelessWidget {
                           style: TextButton.styleFrom(
                             backgroundColor: black,
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/invoice');
+                          },
                           child: Text(
                             'View',
                             style: textWhite.copyWith(

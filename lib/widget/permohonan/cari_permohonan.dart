@@ -1,7 +1,22 @@
 import 'package:e_sewa/theme.dart';
 import 'package:flutter/material.dart';
 
-class CariPermohonan extends StatelessWidget {
+class CariPermohonan extends StatefulWidget {
+  @override
+  _CariPermohonanState createState() => _CariPermohonanState();
+}
+
+class _CariPermohonanState extends State<CariPermohonan> {
+  TextEditingController searchController = TextEditingController();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    setState(() {
+      searchController.text = "Carian";
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget buttonCarian() {
@@ -17,12 +32,32 @@ class CariPermohonan extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              'Carian',
+            Expanded(
+                child: TextFormField(
+              controller: searchController,
+              cursorColor: black,
               style: textBlack.copyWith(
                 fontSize: 24,
               ),
-            ),
+              decoration: InputDecoration(
+                  hintText: "search",
+                  hintStyle: textBlack.copyWith(
+                    fontSize: 24,
+                    color: Colors.grey[700]
+                  ),
+                  enabledBorder: InputBorder.none,
+                  border: InputBorder.none,
+                  disabledBorder: InputBorder.none,
+                  errorBorder: InputBorder.none,
+                  focusedBorder: InputBorder.none,
+                  focusedErrorBorder: InputBorder.none),
+            )),
+            // Text(
+            //   'Carian',
+            //   style: textBlack.copyWith(
+            //     fontSize: 24,
+            //   ),
+            // ),
             Icon(
               Icons.search,
               color: black,
@@ -55,7 +90,10 @@ class CariPermohonan extends StatelessWidget {
               ),
             ),
           ),
-          Text('Pasar A',style: textBlack.copyWith(fontSize: 15),),
+          Text(
+            'Pasar A',
+            style: textBlack.copyWith(fontSize: 15),
+          ),
           Container(
             margin: EdgeInsets.symmetric(
               vertical: 10,
@@ -69,7 +107,10 @@ class CariPermohonan extends StatelessWidget {
               ),
             ),
           ),
-          Text('Pasar B',style: textBlack.copyWith(fontSize: 15),),
+          Text(
+            'Pasar B',
+            style: textBlack.copyWith(fontSize: 15),
+          ),
           Container(
             margin: EdgeInsets.symmetric(
               vertical: 10,
@@ -83,7 +124,10 @@ class CariPermohonan extends StatelessWidget {
               ),
             ),
           ),
-          Text('Pasar D',style: textBlack.copyWith(fontSize: 15),),
+          Text(
+            'Pasar D',
+            style: textBlack.copyWith(fontSize: 15),
+          ),
         ],
       );
     }
@@ -152,9 +196,13 @@ class CariPermohonan extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 15,),
+              SizedBox(
+                height: 15,
+              ),
               buttonCarian(),
-              SizedBox(height: 15,),
+              SizedBox(
+                height: 15,
+              ),
               content(),
             ],
           ),

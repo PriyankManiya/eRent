@@ -2,7 +2,14 @@ import 'package:e_sewa/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 
-class PemabayaranElsen extends StatelessWidget {
+class PemabayaranElsen extends StatefulWidget {
+  @override
+  _PemabayaranElsenState createState() => _PemabayaranElsenState();
+}
+
+class _PemabayaranElsenState extends State<PemabayaranElsen> {
+  String selectedDate = 'Date';
+  String endDate = 'Date';
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -77,10 +84,8 @@ class PemabayaranElsen extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Text(
-                                'Tarikh Mula Sewaan',
-                                style: textBlack.copyWith(fontSize:16)
-                              ),
+                              Text('Tarikh Mula Sewaan',
+                                  style: textBlack.copyWith(fontSize: 16)),
                               Container(
                                 width: 152,
                                 height: 34,
@@ -95,7 +100,7 @@ class PemabayaranElsen extends StatelessWidget {
                                     DatePicker.showDatePicker(context,
                                         showTitleActions: true,
                                         minTime: DateTime(2018),
-                                        maxTime: DateTime.now(),
+                                        maxTime: DateTime.utc(2021, 12, 31),
                                         theme: DatePickerTheme(
                                             headerColor: Colors.orange,
                                             backgroundColor: Colors.blue,
@@ -107,17 +112,22 @@ class PemabayaranElsen extends StatelessWidget {
                                                 color: Colors.white,
                                                 fontSize: 16)),
                                         onChanged: (date) {
-                                      print('change $date in time zone ' +
-                                          date.timeZoneOffset.inHours
-                                              .toString());
+                                     setState(() {
+                                        selectedDate =date.toString().split(" ")[0];
+                                        endDate = "2021-12-31";
+                                      });
+                                      
                                     }, onConfirm: (date) {
-                                      print('confirm $date');
+                                      setState(() {
+                                        selectedDate =date.toString().split(" ")[0];
+                                        endDate = "2021-12-31";
+                                      });
                                     },
                                         currentTime: DateTime.now(),
                                         locale: LocaleType.id);
                                   },
                                   child: Text(
-                                    'Date',
+                                    selectedDate,
                                     style: textWhite.copyWith(
                                       fontWeight: bold,
                                     ),
@@ -127,10 +137,8 @@ class PemabayaranElsen extends StatelessWidget {
                               SizedBox(
                                 height: 28,
                               ),
-                              Text(
-                                'Harga Sewa Bulanan',
-                                style: textBlack.copyWith(fontSize:16)
-                              ),
+                              Text('Harga Sewa Bulanan',
+                                  style: textBlack.copyWith(fontSize: 16)),
                               Container(
                                 width: 94,
                                 height: 34,
@@ -140,17 +148,20 @@ class PemabayaranElsen extends StatelessWidget {
                                   color: black,
                                 ),
                                 child: Center(
-                                  child: Text('RM 140',style: textWhite.copyWith(  fontWeight: bold,),),
+                                  child: Text(
+                                    'RM 140',
+                                    style: textWhite.copyWith(
+                                      fontWeight: bold,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],
                           ),
                           Column(
                             children: [
-                              Text(
-                                'Tarikh Mula Sewaan',
-                                style: textBlack.copyWith(fontSize:16)
-                              ),
+                              Text('Tarikh Mula Sewaan',
+                                  style: textBlack.copyWith(fontSize: 16)),
                               Container(
                                 width: 152,
                                 height: 34,
@@ -162,32 +173,36 @@ class PemabayaranElsen extends StatelessWidget {
                                           borderRadius:
                                               BorderRadius.circular(17))),
                                   onPressed: () {
-                                    DatePicker.showDatePicker(context,
-                                        showTitleActions: true,
-                                        minTime: DateTime(2018),
-                                        maxTime: DateTime.now(),
-                                        theme: DatePickerTheme(
-                                            headerColor: Colors.orange,
-                                            backgroundColor: Colors.blue,
-                                            itemStyle: TextStyle(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 18),
-                                            doneStyle: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 16)),
-                                        onChanged: (date) {
-                                      print('change $date in time zone ' +
-                                          date.timeZoneOffset.inHours
-                                              .toString());
-                                    }, onConfirm: (date) {
-                                      print('confirm $date');
-                                    },
-                                        currentTime: DateTime.now(),
-                                        locale: LocaleType.id);
+                                    // DatePicker.showDatePicker(context,
+                                    //     showTitleActions: true,
+                                    //     minTime: DateTime(2018),
+                                    //     maxTime: DateTime.utc(2021, 12, 31),
+                                    //     theme: DatePickerTheme(
+                                    //         headerColor: Colors.orange,
+                                    //         backgroundColor: Colors.blue,
+                                    //         itemStyle: TextStyle(
+                                    //             color: Colors.white,
+                                    //             fontWeight: FontWeight.bold,
+                                    //             fontSize: 18),
+                                    //         doneStyle: TextStyle(
+                                    //             color: Colors.white,
+                                    //             fontSize: 16)),
+                                    //     onChanged: (date) {
+                                    //  setState(() {
+                                    //     selectedDate =date.toString().split(" ")[0];
+                                    //     endDate = "2021-12-31";
+                                    //   });
+                                    // }, onConfirm: (date) {
+                                    // setState(() {
+                                    //     selectedDate =date.toString().split(" ")[0];
+                                    //     endDate = "2021-12-31";
+                                    //   });
+                                    // },
+                                    //     currentTime: DateTime.now(),
+                                    //     locale: LocaleType.id);
                                   },
                                   child: Text(
-                                    'Date',
+                                    endDate,
                                     style: textWhite.copyWith(
                                       fontWeight: bold,
                                     ),
